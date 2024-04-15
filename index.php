@@ -5,9 +5,9 @@ require __DIR__ . '/vendor/autoload.php';
 use Automattic\WooCommerce\Client;
 use Automattic\WooCommerce\HttpClient\HttpClientException;
 $woocommerce = new Client(
-    'https://70f5f7897a.nxcli.io/', // Your store URL
-    'ck_c38e44917a8a4be6ae423623655879d1a3ccafbf', // Your consumer key
-    'cs_31d43cda312ea0f137338b5699e12cd8f849fdda', // Your consumer secret
+    'https://tallynine.com', // Your store URL
+    'ck_bfc96e5f26d24ea8a617ce942da2790e62083e48', // Your consumer key
+    'cs_a3f52cce66b70ef398e84bfb799d587da873ddd3', // Your consumer secret
     [
         'wp_api' => true, // Enable the WP REST API integration
         'version' => 'wc/v2' // WooCommerce WP REST API version
@@ -151,7 +151,7 @@ if (isset($_POST['btn-delete'])) {
                                             <?php 
                 foreach($results as $details){
 
-                echo "<tr><td>" . $details["id"]."</td>
+                echo "<tr><td><a href=/singleview.php/orderid=".$details["id"].">.$details["id"]."</td>
                           <td>" . $details["billing"]["first_name"].$details["billing"]["last_name"]."</td>
                           <td>" . $details["shipping"]["address_1"]."</td>
                           <td>" . $details["billing"]["phone"]."</td>
