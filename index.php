@@ -151,7 +151,7 @@ if (isset($_POST['btn-delete'])) {
                                             <?php 
                 foreach($results as $details){
 
-                echo "<tr><td>".$details["id"]."</td>
+                echo "<tr><td><a href=/singleview.php/id=".$details['id'].">".$details['id']."</a>
                           <td>" . $details["billing"]["first_name"].$details["billing"]["last_name"]."</td>
                           <td>" . $details["shipping"]["address_1"]."</td>
                           <td>" . $details["billing"]["phone"]."</td>
