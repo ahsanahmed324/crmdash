@@ -1,4 +1,4 @@
 <? php
- echo $_GET[];
+ echo "show me somethin";
 
 ?>
