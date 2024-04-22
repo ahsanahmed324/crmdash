@@ -152,7 +152,7 @@ if (isset($_POST['btn-delete'])) {
 		$nextpage = "singleview.php";
                 foreach($results as $details){
 
-                echo "<tr><td>".'<a href="'.$nextpage.'/?idd=5">'.$details['id']."</a></td>
+                echo "<tr><td>".'<a href="'.$nextpage.'/?idd='.$details['id'].'">'.$details['id']."</a></td>
                           <td>" . $details["billing"]["first_name"].$details["billing"]["last_name"]."</td>
                           <td>" . $details["shipping"]["address_1"]."</td>
                           <td>" . $details["billing"]["phone"]."</td>
