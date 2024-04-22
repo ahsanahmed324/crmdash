@@ -1,4 +1,4 @@
 <?php
- echo "show me somethin";
-
+$products = $woocommerce->get('products');
+print_r($products);
 ?>
