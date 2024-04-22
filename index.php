@@ -216,7 +216,7 @@ if (isset($_POST['btn-delete'])) {
                                             <tbody>
                                                 <?php 
                     foreach($products as $product){
-			print_r($product);
+			print($product);
                     echo "<tr><td>" . $product["sku"]."</td>
                               <td>" . $product.["name"]"</td>
                               <td>" . $product["status"]."</td>
