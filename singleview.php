@@ -1,3 +1,3 @@
 <?php
-    echo $_REQUEST['link'];
+    echo $_REQUEST['idd'];
 ?>
