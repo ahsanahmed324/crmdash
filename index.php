@@ -217,9 +217,9 @@ if (isset($_POST['btn-delete'])) {
                                                 <?php
 			
                     foreach($products as $product){
-			print_r($product);
+			
                     echo "<tr><td>" . $product["sku"]."</td>
-                              <td>" . $product.["name"]."</td>
+                              <td><a href='.$product.["permalink"].'>" . $product.["name"]."</a></td>
                               <td>" . $product["status"]."</td>
                               <td>" . $product["price"]."</td>
                               <td>" . $product["total_sales"]."</td>
