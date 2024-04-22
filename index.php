@@ -158,7 +158,7 @@ if (isset($_POST['btn-delete'])) {
                           <td>" . $details["date_created"]."</td>
                           <td>" . $details["status"]."</td>
                           <td><a class='open-AddBookDialog btn btn-primary' data-target='#myModal' data-id=".$details['id']." data-toggle='modal'>Update</a>
-                          <a class='open-deleteDialog btn btn-danger' href='singleview.php'>View</a>
+                          <a class='open-deleteDialog btn btn-danger' href='/singleview.php/'>View</a>
                           <a class='open-deleteDialog btn btn-danger' data-target='#myModal1' data-id=".$details['id']." data-toggle='modal'>Delete</a></td></tr>";
                 }
                 ?>
@@ -219,7 +219,7 @@ if (isset($_POST['btn-delete'])) {
                     foreach($products as $product){
 			
                     echo "<tr><td>" . $product["sku"].'</td>
-                              <td>. $product.["permalink"]."</td>
+                              <td>. $product.["name"]."</td>
                               <td>" . $product["status"]."</td>
                               <td>" . $product["price"]."</td>
                               <td>" . $product["total_sales"]."</td>
