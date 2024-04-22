@@ -149,6 +149,7 @@ if (isset($_POST['btn-delete'])) {
                                         </thead>
                                         <tbody>
                                             <?php 
+		$nextpage = "singleview.php";
                 foreach($results as $details){
 
                 echo "<tr><td>".$details['id']."</td>
@@ -156,9 +157,9 @@ if (isset($_POST['btn-delete'])) {
                           <td>" . $details["shipping"]["address_1"]."</td>
                           <td>" . $details["billing"]["phone"]."</td>
                           <td>" . $details["date_created"]."</td>
-                          <td>" . $details["status"]."</td>
-                          <td><a class='open-AddBookDialog btn btn-primary' data-target='#myModal' data-id=".$details['id']." data-toggle='modal'>Update</a>
-                          <a class='open-deleteDialog btn btn-danger' href='singleview.php'>View</a>
+                          <td>" . $details["status"].'</td>
+                          <td><a class="open-AddBookDialog btn btn-primary" data-target="#myModal" data-id='.$details['id'].' data-toggle="modal">Update</a>
+                          <a class="open-deleteDialog btn btn-danger" href="'.$nextpage.'">View</a>
                           <a class='open-deleteDialog btn btn-danger' data-target='#myModal1' data-id=".$details['id']." data-toggle='modal'>Delete</a></td></tr>";
                 }
                 ?>
