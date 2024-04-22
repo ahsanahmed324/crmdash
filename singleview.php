@@ -1,3 +1,3 @@
 <?php
-    echo $_REQUEST['idd'];
+    echo htmlspecialchars($_GET["idd"]);
 ?>
