@@ -1,6 +1,8 @@
 <?php
+    include index.php;
+
     echo htmlspecialchars($_GET["idd"]);
-    echo $GLOBALS['$woocommerce'];
-    //$productss = $xx->get('products');
-    //print_r($productss);
+    //echo $GLOBALS['$woocommerce'];
+    $products = $xx->get('products');
+    print_r($products);
 ?>
