@@ -1,6 +1,6 @@
 <?php
     //include 'index.php';
-    <?php
+    
     require __DIR__ . '/vendor/autoload.php';
 
     use Automattic\WooCommerce\Client;
