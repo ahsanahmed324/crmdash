@@ -45,13 +45,14 @@
     <title>Dashboard Template for Bootstrap</title>
 
 </head>
-             <div class="container">
-                              <h2 class="sub-header">Order Detail</h2>
+            <div class="container">
+                              <h2 class="sub-header">Orders List</h2>
                                 <div class='table-responsive'>
                                     <table id='myTable' class='table table-striped table-bordered'>
                                         <thead>
                                             <tr>
                                                 <th>Order #</th>
+                                                <th>Order Date</th>
                                                 <th>Customer</th>
                                                 <th>Address</th>
                                                 <th>Contact</th>
@@ -61,6 +62,21 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php 
+		$nextpage = "singleview.php";
+                //foreach($results as $details){
+
+                echo "<tr><td>" .$ord['id']."</td>
+                          <td>" . $ord["date_created"]."</td>  
+                          <td>" . $ord["billing"]["first_name"].$ord["billing"]["last_name"]."</td>
+                          <td>" . $ord["shipping"]["address_1"]."</td>
+                          <td>" . $ord["billing"]["phone"]."</td>
+                          <td>" . 'itemsss'."</td>
+			  <td>" . $ord["status"]."</td>
+                          <td><a class='open-AddBookDialog btn btn-primary' data-target='#myModal' data-id=".$ord['id']." data-toggle='modal'>Update</a>
+                          <a class='open-deleteDialog btn btn-danger' data-target='#myModal1' data-id=".$ord['id']." data-toggle='modal'>Delete</a></td></tr>";
+                }
+                ?>
                                         </tbody>
                                     </table>
                                 </div>
