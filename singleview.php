@@ -20,6 +20,6 @@
     $coming_id = htmlspecialchars($_GET["idd"]);
     echo htmlspecialchars($_GET["idd"]);
     //echo $GLOBALS['$woocommerce'];
-    $ord = $woocommerce->get('orders');
+    $ord = $woocommerce->get('orders/222024');
     print_r($ord);
 ?>
