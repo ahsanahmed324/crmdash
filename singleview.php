@@ -3,6 +3,6 @@
 
     echo htmlspecialchars($_GET["idd"]);
     //echo $GLOBALS['$woocommerce'];
-    $products = $xx->get('products');
+    $products = $woocommerce->get('products');
     print_r($products);
 ?>
