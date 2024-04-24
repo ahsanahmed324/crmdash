@@ -1,5 +1,5 @@
 <?php
-    include index.php;
+    include 'index.php';
 
     echo htmlspecialchars($_GET["idd"]);
     //echo $GLOBALS['$woocommerce'];
