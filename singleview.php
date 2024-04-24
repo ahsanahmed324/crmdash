@@ -21,5 +21,7 @@
     echo htmlspecialchars($_GET["idd"]);
     //echo $GLOBALS['$woocommerce'];
     $ord = $woocommerce->get('orders/222024');
+    print "<pre>";
     print_r($ord);
+    print "</pre>";
 ?>
