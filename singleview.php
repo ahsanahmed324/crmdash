@@ -65,7 +65,7 @@
                                             <?php 
 		$nextpage = "singleview.php";
                 //foreach($results as $details){
-
+		
                 echo "<tr><td>" .$ord['id']."</td>
                           <td>" . $ord["date_created"]."</td>  
                           <td>" . $ord["billing"]["first_name"].$ord["billing"]["last_name"]."</td>
