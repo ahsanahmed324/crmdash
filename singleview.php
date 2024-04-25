@@ -22,8 +22,11 @@
     //echo $GLOBALS['$woocommerce'];
     $ord = $woocommerce->get('orders/221990');
     $product_items = array_shift($ord['line_items']);
+    $test_items = $ord->get_items();
     print "<pre>ppp";
-    print_r($ord['line_items']);
+    print_r($ord);
+    print " test items";
+    print_r($test_items);
     print "</pre>";
 ?>
 <!DOCTYPE html>
