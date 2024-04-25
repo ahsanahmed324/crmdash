@@ -21,9 +21,9 @@
     echo htmlspecialchars($_GET["idd"]);
     //echo $GLOBALS['$woocommerce'];
     $ord = $woocommerce->get('orders/222024');
-    print "<pre>";
-    print_r($ord);
-    print "</pre>";
+    //print "<pre>";
+    //print_r($ord);
+    //print "</pre>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,9 +75,19 @@
 			  <td>" . $ord["status"]."</td>
                           <td><a class='open-AddBookDialog btn btn-primary' data-target='#myModal' data-id=".$ord['id']." data-toggle='modal'>Update</a>
                           <a class='open-deleteDialog btn btn-danger' data-target='#myModal1' data-id=".$ord['id']." data-toggle='modal'>Delete</a></td></tr>";
-                ?>
+                
                                         </tbody>
                                     </table>
                                 </div>
                </div>
+               echo"<div class='row'>
+  			 <div class='col-sm-9'>".$ord['id']."</br>
+			 <p>". $ord["date_created"] ."</p>
+			 </div>
+ 			 <div class='col-sm-3'>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
+			 <p>". $ord["shipping"]["address_1"]."</p>
+			 </br>
+			 </div>
+		</div>";
+               ?>
 </html>
