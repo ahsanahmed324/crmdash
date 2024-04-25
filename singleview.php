@@ -81,7 +81,8 @@
                                 </div>
                </div>
 	       <?php
-               echo"<div class='row'>
+               echo"<div class='container'>
+			 <div class='row'>
   			 <div class='col-sm-9'>".$ord['id']."</br>
 			 <p>". $ord["date_created"] ."</p>
 			 </div>
@@ -89,6 +90,7 @@
 			 <p>". $ord["shipping"]["address_1"]."</p>
 			 </br>
 			 </div>
+			 </div>	
 		</div>";
                ?>
 </html>
