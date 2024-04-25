@@ -23,7 +23,7 @@
     $ord = $woocommerce->get('orders/221990');
     $product_items = array_shift($ord['line_items']);
     print "<pre>";
-    print_r($product_items);
+    print_r($ord['line_items']);
     print "</pre>";
 ?>
 <!DOCTYPE html>
