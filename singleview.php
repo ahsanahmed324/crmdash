@@ -85,7 +85,7 @@
 			 <div class='row'>
   			 <div class='col-sm-9'>".$ord['id']."  ".$ord["status"]."</br>
 			 <p>". $ord["date_created"] ."</p></br>
-			 <p>". $ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"]."
+			 <p>". $ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"]." , ".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."
 			 </div>
  			 <div class='col-sm-3'>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
 			 <p>". $ord["shipping"]["address_1"]."</p>
