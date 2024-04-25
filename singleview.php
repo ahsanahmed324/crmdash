@@ -75,11 +75,12 @@
 			  <td>" . $ord["status"]."</td>
                           <td><a class='open-AddBookDialog btn btn-primary' data-target='#myModal' data-id=".$ord['id']." data-toggle='modal'>Update</a>
                           <a class='open-deleteDialog btn btn-danger' data-target='#myModal1' data-id=".$ord['id']." data-toggle='modal'>Delete</a></td></tr>";
-                
+                ?>
                                         </tbody>
                                     </table>
                                 </div>
                </div>
+	       <?php
                echo"<div class='row'>
   			 <div class='col-sm-9'>".$ord['id']."</br>
 			 <p>". $ord["date_created"] ."</p>
