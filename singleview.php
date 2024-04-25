@@ -25,8 +25,8 @@
     //$test_items = wc_get_order($ord["id"]);
     print "<pre>ppp";
     print_r($ord);
-    //print " test items";
-    //print_r($test_items);
+    print " test items";
+    print_r($product_items);
     print "</pre>";
 ?>
 <!DOCTYPE html>
