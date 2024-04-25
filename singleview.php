@@ -81,13 +81,22 @@
                                 </div>
                </div>
 	       <?php
+
+            $product_items = $ord['line_items'];
                echo"<div class='container'>
 			 <div class='row'>
-  			 <div class='col-sm-9'>".$ord['id']."  ".$ord["status"]."</br>
+  			 <div class='col-sm-9'><h4>Order detail</h4></br>".$ord['id']."  ".$ord["status"]."</br>
 			 <p>". $ord["date_created"] ."</p></br>
-			 <p>". $ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"]." , ".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."
-			 </div>
- 			 <div class='col-sm-3'>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
+			 <p>". $ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
+			 <p>".
+                    foreach ($product_items as $key) {
+                        # code...
+                        return $key;
+                    }
+             
+             ."
+             </div>
+ 			 <div class='col-sm-3'><h4>Customer detail</h4></br>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
 			 <p>". $ord["shipping"]["address_1"]."</p>
 			 </br>
 			 </div>
