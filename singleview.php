@@ -21,9 +21,9 @@
     echo htmlspecialchars($_GET["idd"]);
     //echo $GLOBALS['$woocommerce'];
     $ord = $woocommerce->get('orders/222024');
-    //print "<pre>";
-    //print_r($ord);
-    //print "</pre>";
+    print "<pre>";
+    print_r($ord);
+    print "</pre>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,8 +83,9 @@
 	       <?php
                echo"<div class='container'>
 			 <div class='row'>
-  			 <div class='col-sm-9'>".$ord['id']."</br>
-			 <p>". $ord["date_created"] ."</p>
+  			 <div class='col-sm-9'>".$ord['id']."  ".$ord["status"]."</br>
+			 <p>". $ord["date_created"] ."</p></br>
+			 <p>". $ord["shipping"]["address_1"]."</p></br>
 			 </div>
  			 <div class='col-sm-3'>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
 			 <p>". $ord["shipping"]["address_1"]."</p>
