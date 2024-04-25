@@ -23,7 +23,7 @@
     $ord = $woocommerce->get('orders/221990');
     $product_items = array_shift($ord['line_items']);
     print "<pre>";
-    print_r($ord);
+    print_r($product_items);
     print "</pre>";
 ?>
 <!DOCTYPE html>
@@ -92,7 +92,7 @@
 			 <p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>
              </div>
  			 <div class='col-sm-3'><h4>Customer detail</h4></br>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
-			 <p>". $ord["shipping"]["[email]"]."</p>
+			 <p>". $ord["shipping"]["email"]."</p>
 			 </br>
 			 </div>
 			 </div>	
