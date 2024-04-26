@@ -94,7 +94,7 @@
 			 <p>". $ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
 			 <p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>";
                     foreach ($ord['line_items'] as $key => $value) {
-                        echo "</br> ".$key ." = ". $value["name"];
+                        echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"];
                     }
              
              echo"
