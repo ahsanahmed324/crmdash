@@ -22,7 +22,7 @@
     //echo $GLOBALS['$woocommerce'];
     $ord = $woocommerce->get('orders/221990');
     $product_items = array_shift($ord['line_items']);
-    //$test_items = wc_get_order($ord["id"]);
+    //$test_items = ($ord['line_items']);
     print "<pre>ppp";
     print_r($ord);
     print " test items";
@@ -92,7 +92,13 @@
   			 <div class='col-sm-9'><h4>Order detail</h4></br>".$ord['id']."  ".$ord["status"]."</br>
 			 <p>". $ord["date_created"] ."</p></br>
 			 <p>". $ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
-			 <p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>
+			 <p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>";
+                    foreach ($ord['line_items'] as $key => $value) {
+                        echo $key ."=". $value;
+                    }
+             
+             echo"
+               
              </div>
  			 <div class='col-sm-3'><h4>Customer detail</h4></br>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
 			 <p>". $ord["shipping"]["email"]."</p>
