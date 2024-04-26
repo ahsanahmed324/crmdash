@@ -20,7 +20,7 @@
     $coming_id = htmlspecialchars($_GET["idd"]);
     echo htmlspecialchars($_GET["idd"]);
     //echo $GLOBALS['$woocommerce'];
-    $ord = $woocommerce->get('orders/221990');
+    $ord = $woocommerce->get('orders/221955');
     $product_items = array_shift($ord['line_items']);
     //$test_items = ($ord['line_items']);
     print "<pre>ppp";
