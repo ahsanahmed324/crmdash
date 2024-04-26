@@ -97,7 +97,7 @@
                         echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"];
                     }
                     foreach ($ord[meta_data] as $key => $value) {
-
+                            echo $value["key"];
                         if ($value["key"] == "_bump_purchase_item_total")
                         {
                         echo "</br> "."<span style='font-weight:bold;'> bump value </span>". $value["value"];
