@@ -98,7 +98,7 @@
                     }
                     foreach ($ord["line_items"] as $key => $value) {
                         //echo $key." => ".$value;
-                            eco "<pre>";
+                            echo "<pre>";
                             print_r($value);
                             echo "</pre>";
                         if ($value["key"] == "_bump_purchase_item_total")
