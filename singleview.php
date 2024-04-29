@@ -106,9 +106,6 @@
                             echo "</pre>";
                         echo "</br> "."<span style='font-weight:bold;'> bump value </span>". $value["value"]."</p>";
                         }
-                        else{
-                            return 0;
-                        }
         
                     }
              
