@@ -92,10 +92,24 @@
   			 <div class='col-sm-9'><h4>Order detailss</h4></br>".$ord['id']."  ".$ord["status"]."</br>
 			 <p>". $ord["date_created"] ."</p></br>
 			 <pstyle='text-decoration: underline'>". "<strong>Address: </strong>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
-             <p style='text-decoration: underline'><strong>Items: </strong></p>
-			 <p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>";
+             <p style='text-decoration: underline'><strong>Items: </strong></p>";
+			 ?>
+                <table id='myTable' class='table table-striped table-bordered'>
+                                        <thead>
+                                            <tr>
+                                                <th>Quantity</th>
+                                                <th>Product</th>
+                                                <th>subtotal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+             <?php
+             echo"<p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>";
                     foreach ($ord['line_items'] as $key => $value) {
-                        echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"]." x ".$value["quantity"]." <strong>".$value["price"]."</strong>";
+                        //echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"]." x ".$value["quantity"]." <strong>".$value["price"]."</strong>";
+                        echo "<tr><td>" .$value["quantity"]."</td>
+                          <td>" . $value["name"]."</td>
+                          <td>" . $value["total"]."</td></tr>";
                     }
              
              echo"
