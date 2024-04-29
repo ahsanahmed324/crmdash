@@ -95,14 +95,14 @@
              <p style='text-decoration: underline'><strong>Items: </strong></p>";
 			 ?>
                 <table id='myTable' class='table table-striped table-bordered'>
-                                        <thead>
-                                            <tr>
-                                                <th>Quantity</th>
-                                                <th>Product</th>
-                                                <th>subtotal</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
+                    <thead>
+                        <tr>
+                            <th>Quantity</th>
+                            <th>Product</th>
+                            <th>subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
              <?php
              echo"<p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>";
                     foreach ($ord['line_items'] as $key => $value) {
@@ -111,7 +111,11 @@
                           <td>" . $value["name"]."</td>
                           <td>" . $value["total"]."</td></tr>";
                     }
-             
+             ?>
+                    </tbody>
+                </table>
+                
+            <?php    
              echo"
              
              </div>
