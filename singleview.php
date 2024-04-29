@@ -49,8 +49,9 @@
     <title>Dashboard Template for Bootstrap</title>
 
 </head>
-            <div class="container">
-                              <h2 class="sub-header">Orders List</h2>
+ <body>
+               <div class="container">
+                              //<h2 class="sub-header">Orders List</h2>
                                 <div class='table-responsive'>
                                 </div>
                </div>
@@ -58,11 +59,11 @@
         
             
                echo"<div class='container'>
-			 <div class='row'>
-  			 <div class='col-sm-9'><h4>Order detailss</h4></br>".$ord['id']."  ".$ord["status"]."</br>
+			 <div class='row' style='border: 1px solid #d1cdcd; border-radius: 12px; padding: 15px; box-shadow:0px 0px 20px 0px #888888;'>
+  			 <div class='col-sm-9'><h4>Order Details</h4></br>".$ord['id']."  ".$ord["status"]."</br>
 			 <p>". $ord["date_created"] ."</p></br>
-			 <pstyle='text-decoration: underline'>". "<strong>Address: </strong>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
-             <p style='text-decoration: underline'><strong>Items: </strong></p>";
+			 <pstyle='text-decoration: underline; font-size: 16px;'>". "<strong>Address: </strong></br>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
+             </br><p style='text-decoration: underline; font-size: 16px;'><strong>Items: </strong></p>";
 			 ?>
                 <table id='myTable' class='table table-striped table-bordered'>
                     <thead>
@@ -81,12 +82,12 @@
             ?>
                     </tbody>
                 </table>
-                <p>Upsells/Bumps: </p>
+                <p><strong>Upsells/Bumps: </strong></p>
                 <table id='myTable' class='table table-striped table-bordered'>
                     <thead>
                         <tr>
-                            <th>Quantity</th>
                             <th>Product</th>
+                            <th>Quantity</th>
                             <th>subtotal</th>
                         </tr>
                     </thead>
@@ -94,8 +95,8 @@
             <?php                       
                     foreach ($ord['line_items'] as $key => $value) {
                         //echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"]." x ".$value["quantity"]." <strong>".$value["price"]."</strong>";
-                        echo "<tr><td>" .$value["quantity"]."</td>
-                          <td>" . $value["name"]."</td>
+                        echo "<tr><td>" .$value["name"]."</td>
+                          <td>" . $value["quantity"]."</td>
                           <td>" . $value["total"]."</td></tr>";
                     }
              ?>
@@ -113,4 +114,5 @@
 			 </div>	
 		</div>";
                ?>
+    </body>
 </html>
