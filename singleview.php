@@ -98,11 +98,12 @@
                     }
                     foreach ($ord["line_items"] as $key => $value) {
                         //echo $key." => ".$value;
-                            echo "<pre>";
-                            print_r($value);
-                            echo "</pre>";
-                        if ($value["key"] == "_bump_purchase_item_total")
+                            
+                        foreach ($value["meta_data"] as $key2 => $value2)
                         {
+                            echo "<pre>";
+                            print_r($value2);
+                            echo "</pre>";
                         echo "</br> "."<span style='font-weight:bold;'> bump value </span>". $value["value"]."</p>";
                         }
                         else{
