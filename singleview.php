@@ -94,19 +94,7 @@
 			 <p>". $ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
 			 <p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>";
                     foreach ($ord['line_items'] as $key => $value) {
-                        echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"];
-                    }
-                    foreach ($ord["line_items"] as $key => $value) {
-                        //echo $key." => ".$value;
-                            
-                        foreach ($value["meta_data"] as $key2 => $value2)
-                        {
-                            echo "<pre>";
-                            print_r($value2);
-                            echo "</pre>";
-                        echo "</br> "."<span style='font-weight:bold;'> bump value </span>". $value["value"]."</p>";
-                        }
-        
+                        echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"]."<strong>".$value["price"]."</strong>";
                     }
              
              echo"
