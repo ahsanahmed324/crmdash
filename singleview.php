@@ -51,7 +51,7 @@
 </head>
  <body>
                <div class="container">
-                              //<h2 class="sub-header">Orders List</h2>
+                              
                                 <div class='table-responsive'>
                                 </div>
                </div>
@@ -60,7 +60,7 @@
             
                echo"<div class='container'>
 			 <div class='row' style='border: 1px solid #d1cdcd; border-radius: 12px; padding: 15px; box-shadow:0px 0px 20px 0px #888888;'>
-  			 <div class='col-sm-9'><h4>Order Details</h4></br>".$ord['id']."  ".$ord["status"]."</br>
+  			 <div class='col-sm-9'><h2><strong>Order Details</strong></h2></br>".$ord['id']."  ".$ord["status"]."</br>
 			 <p>". $ord["date_created"] ."</p></br>
 			 <pstyle='text-decoration: underline; font-size: 16px;'>". "<strong>Address: </strong></br>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
              </br><p style='text-decoration: underline; font-size: 16px;'><strong>Items: </strong></p>";
