@@ -97,11 +97,14 @@
                         echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"];
                     }
                     foreach ($ord["line_items"] as $key => $value) {
-                        echo $key." => ".$value;
-                            echo $value["key"];
+                        //echo $key." => ".$value;
+                          //  echo $value["key"];
                         if ($value["key"] == "_bump_purchase_item_total")
                         {
                         echo "</br> "."<span style='font-weight:bold;'> bump value </span>". $value["value"]."</p>";
+                        }
+                        else{
+                            return 0;
                         }
         
                     }
