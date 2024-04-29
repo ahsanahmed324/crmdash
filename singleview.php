@@ -106,12 +106,7 @@
                     }
              
              echo"
-             <div class='row'>
-             <div class='col-sm-9'>
-             FFFF
-             </div>
-             <div class='col-sm-3'>KKK</div>
-             </div>
+             
              </div>
  			 <div class='col-sm-3'><h4>Customer detail</h4></br>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
 			 <p>". $ord["billing"]["email"]."</p>
