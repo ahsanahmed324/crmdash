@@ -100,16 +100,22 @@
                             echo $value["key"];
                         if ($value["key"] == "_bump_purchase_item_total")
                         {
-                        echo "</br> "."<span style='font-weight:bold;'> bump value </span>". $value["value"];
+                        echo "</br> "."<span style='font-weight:bold;'> bump value </span>". $value["value"]."</p>";
                         }
         
                     }
              
              echo"
-               
+             <div class='row'>
+             <div class='col-sm-9'>"
+             ."FFF"."
+             
+             </div>
+             <div class='col-sm-3'>KKK</div>
+             </div>
              </div>
  			 <div class='col-sm-3'><h4>Customer detail</h4></br>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
-			 <p>". $ord["shipping"]["email"]."</p>
+			 <p>". $ord["billing"]["email"]."</p>
 			 </br>
 			 </div>
 			 </div>	
