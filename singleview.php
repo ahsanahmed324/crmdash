@@ -67,14 +67,30 @@
                 <table id='myTable' class='table table-striped table-bordered'>
                     <thead>
                         <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+             <?php
+                //echo"<p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>";
+                echo   "<tr><td>".$product_items["name"]."</td>
+                       <td>".$product_items["quantity"]."</td>
+                       <td>".$product_items["subtotal"];
+            ?>
+                    </tbody>
+                </table>
+                <table id='myTable' class='table table-striped table-bordered'>
+                    <thead>
+                        <tr>
                             <th>Quantity</th>
                             <th>Product</th>
                             <th>subtotal</th>
                         </tr>
                     </thead>
                     <tbody>
-             <?php
-             echo"<p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>";
+            <?php                       
                     foreach ($ord['line_items'] as $key => $value) {
                         //echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"]." x ".$value["quantity"]." <strong>".$value["price"]."</strong>";
                         echo "<tr><td>" .$value["quantity"]."</td>
