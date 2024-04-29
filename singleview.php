@@ -91,10 +91,11 @@
 			 <div class='row'>
   			 <div class='col-sm-9'><h4>Order detailss</h4></br>".$ord['id']."  ".$ord["status"]."</br>
 			 <p>". $ord["date_created"] ."</p></br>
-			 <p>". $ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
+			 <pstyle='text-decoration: underline'>". "<strong>Address: </strong>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
+             <p style='text-decoration: underline'><strong>Items: </strong></p>
 			 <p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>";
                     foreach ($ord['line_items'] as $key => $value) {
-                        echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"]."<strong>".$value["price"]."</strong>";
+                        echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"]." x ".$value["quantity"]." <strong>".$value["price"]."</strong>";
                     }
              
              echo"
