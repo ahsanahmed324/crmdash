@@ -81,6 +81,7 @@
             ?>
                     </tbody>
                 </table>
+                <p>Upsells/Bumps: </p>
                 <table id='myTable' class='table table-striped table-bordered'>
                     <thead>
                         <tr>
