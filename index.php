@@ -20,7 +20,7 @@ $woocommerce = new Client(
 $lastResponse = $woocommerce->http->getResponse();
 $headers = $lastResponse->getHeaders();
 $totalPages = $headers['X-WP-TotalPages'];
-
+print_r($totalPages);
 // Make a new request for each page here using totalpages
 for ($x = 1; $x <= $totalPages; $x++) {
 	
