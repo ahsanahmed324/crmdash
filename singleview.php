@@ -23,11 +23,11 @@
     $ord = $woocommerce->get('orders/221955');
     $product_items = array_shift($ord['line_items']);
     //$test_items = ($ord['line_items']);
-    print "<pre>ppp";
-    print_r($ord);
-    print " test items";
-    print_r($product_items);
-    print "</pre>";
+    //print "<pre>ppp";
+    //print_r($ord);
+    //print " test items";
+    //print_r($product_items);
+    //print "</pre>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +55,7 @@
             
             echo"<div class='container'>
 			    <div class='row' style='border: 1px solid #d1cdcd; border-radius: 12px; padding: 15px; margin-bottom:30px; box-shadow:0px 0px 20px 0px #888888;'>
-  			        <div class='col-sm-9'><h2><strong>Order #".$ord['id']."</strong></h2></br>".$ord['id']."  ".$ord["status"]."</br>
+  			        <div class='col-sm-9'><h2><strong>Order #".$ord['id']."</strong></h2></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
 			            <p>". $ord["date_created"] ."</p></br>
 			            <p style='text-decoration: underline; font-size: 16px;'><strong>Address: </strong></p></br><p>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
                         </br><p style='text-decoration: underline; font-size: 16px;'><strong>Items: </strong></p>";
