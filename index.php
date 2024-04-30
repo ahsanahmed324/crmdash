@@ -27,5 +27,5 @@ for ($x = 1; $x <= $totalPages; $x++) {
     $response = $woocommerce->get('products?type=simple&status=publish&in_stock=true');
 } 
 
-//print("<pre>".print_r($response,true)."</pre>");	
+print("<pre>".print_r($response,true)."</pre>");	
 ?>
