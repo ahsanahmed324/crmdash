@@ -50,68 +50,61 @@
 
 </head>
  <body>
-               <div class="container">
-                              
-                                <div class='table-responsive'>
-                                </div>
-               </div>
-	       <?php
+	        <?php
         
             
-               echo"<div class='container'>
-			 <div class='row' style='border: 1px solid #d1cdcd; border-radius: 12px; padding: 15px; box-shadow:0px 0px 20px 0px #888888;'>
-  			 <div class='col-sm-9'><h2><strong>Order #".$ord['id']."Details</strong></h2></br>".$ord['id']."  ".$ord["status"]."</br>
-			 <p>". $ord["date_created"] ."</p></br>
-			 <pstyle='text-decoration: underline; font-size: 16px;'>". "<strong>Address: </strong></br>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
-             </br><p style='text-decoration: underline; font-size: 16px;'><strong>Items: </strong></p>";
-			 ?>
-                <table id='myTable' class='table table-striped table-bordered'>
-                    <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>subtotal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-             <?php
-                //echo"<p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>";
-                echo   "<tr><td>".$product_items["name"]."</td>
-                       <td>".$product_items["quantity"]."</td>
-                       <td>".$product_items["subtotal"];
+            echo"<div class='container'>
+			    <div class='row' style='border: 1px solid #d1cdcd; border-radius: 12px; padding: 15px; box-shadow:0px 0px 20px 0px #888888;'>
+  			        <div class='col-sm-9'><h2><strong>Order #".$ord['id']."</strong></h2></br>".$ord['id']."  ".$ord["status"]."</br>
+			            <p>". $ord["date_created"] ."</p></br>
+			            <pstyle='text-decoration: underline; font-size: 16px;'>". "<strong>Address: </strong></br>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
+                        </br><p style='text-decoration: underline; font-size: 16px;'><strong>Items: </strong></p>";
+			?>
+                        <table id='myTable' class='table table-striped table-bordered'>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+            <?php
+                            //echo"<p>". $product_items["name"]."<span> x ".$product_items["quantity"]." </span><span> ".$product_items["subtotal"]."</span>";
+                            echo   "<tr><td>".$product_items["name"]."</td>
+                            <td>".$product_items["quantity"]."</td>
+                            <td>".$product_items["subtotal"];
             ?>
-                    </tbody>
-                </table>
-                <p><strong>Upsells/Bumps: </strong></p>
-                <table id='myTable' class='table table-striped table-bordered'>
-                    <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>subtotal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+                            </tbody>
+                        </table>
+                        <p><strong>Upsells/Bumps: </strong></p>
+                        <table id='myTable' class='table table-striped table-bordered'>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
             <?php                       
-                    foreach ($ord['line_items'] as $key => $value) {
-                        //echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"]." x ".$value["quantity"]." <strong>".$value["price"]."</strong>";
-                        echo "<tr><td>" .$value["name"]."</td>
-                          <td>" . $value["quantity"]."</td>
-                          <td>" . $value["total"]."</td></tr>";
-                    }
+                            foreach ($ord['line_items'] as $key => $value) {
+                            //echo "</br> "."<span style='font-weight:bold;'> upsell purchase: </span>". $value["name"]." x ".$value["quantity"]." <strong>".$value["price"]."</strong>";
+                            echo "<tr><td>" .$value["name"]."</td>
+                            <td>" . $value["quantity"]."</td>
+                            <td>" . $value["total"]."</td></tr>";
+                            }
              ?>
-                    </tbody>
-                </table>
-                
+                            </tbody>
+                        </table>
             <?php    
-             echo"
-             
-             </div>
- 			 <div class='col-sm-3'><h4>Customer detail</h4></br>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
-			 <p>". $ord["billing"]["email"]."</p>
-			 </br>
-			 </div>
-		</div>";
-               ?>
+            echo"
+                    </div>
+ 			            <div class='col-sm-3'><h4>Customer detail</h4></br>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
+			            <p>". $ord["billing"]["email"]."</p>
+			            </br>
+			    </div>
+		    </div>";
+            ?>
     </body>
 </html>
