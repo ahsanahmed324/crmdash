@@ -17,10 +17,12 @@ $woocommerce = new Client(
 
 //$products = $woocommerce->get('products');
 
-
+$paramz = "orders";
+$thepage = 1;
 try {
 
-	$results = $woocommerce->get('orders');
+    $results = $woocommerce->get($paramz);
+	//$results = $woocommerce->get('orders');
 	$products = $woocommerce->get('products');
 	$customers = $woocommerce->get('customers');
 	$result = count($results);
@@ -164,6 +166,16 @@ if (isset($_POST['btn-delete'])) {
                 ?>
                                         </tbody>
                                     </table>
+                                    $woocommerce->get($paramx);
+                                    <form action="index.php" method="post">
+                                        <input type="submit" name="appetizer_button" value="Appetizers & Soup">
+                                    </form>
+                                    <?php
+                                        if (isset($_POST['appetizer_button'])) {
+                                            // Your code that you want to execute
+                                            $paramz = "orders/222012";
+                                        }
+                                    ?>
                                 </div>
                </div>
 
