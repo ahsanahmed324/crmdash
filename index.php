@@ -181,11 +181,12 @@ if (isset($_POST['btn-delete'])) {
                                         </tbody>
                                     </table>
                                     <form action="index.php" method="post">
-                                        <input type="submit" name="appetizer_button" value="Appetizers & Soup">
+                                        <input class="btn" type="submit" name="appetizer_button" value="Appetizers & Soup">
                                     </form>
                                     <?php
                                         if (isset($_POST['appetizer_button'])) {
                                             // Your code that you want to execute
+                                            alert("button pressed");
                                             myMessage();
                                         }
                                     ?>
