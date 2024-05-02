@@ -36,9 +36,9 @@ $woocommerce = new Client(
 //$thepage = 1;
 
 if (isset($_GET['page_no'])){
-    echo "page onee";
+    
     $currentPage = $_GET['page_no'];
-    $querry = "orders?page=".$currentPage.">;"." rel='next'";
+    $querry = "orders?page=".$currentPage."&"." rel='next'";
 
     try {
 
