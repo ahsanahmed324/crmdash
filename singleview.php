@@ -56,7 +56,7 @@
             echo"<div class='container'>
 			    <div class='row' style='border: 1px solid #d1cdcd; Xborder-radius: 12px; padding: 15px; Xmargin-bottom:30px; Xbox-shadow:0px 0px 20px 0px #888888;'>
   			        <div class='col-sm-9' style='background-color: #282828; width:70%; margin-right:5px; border-radius: 12px;'><h2><strong>Order #".$ord['id']."</strong></h2></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
-			            <p class="data_text">". $ord["date_created"] ."</p></br>
+			            <p class='data-text'>". $ord["date_created"] ."</p></br>
 			            <p style='text-decoration: underline; font-size: 16px;'><strong>Address: </strong></p><p>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
                         </br><p style='text-decoration: underline; font-size: 16px;'><strong>Items: </strong></p>";
 			?>
