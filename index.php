@@ -233,7 +233,7 @@ if (isset($_POST['btn-delete'])) {
                                         </tbody>
                                     </table>
                                     <?php 
-                                       $pge_no= $_GET['page_no'];
+                                       $pge_no= htmlspecialchars($_GET['page_no']);
                                        echo gettype($pge_no);
                                        $pge_no = $pge_no + 10; 
                                        echo $pge_no;
