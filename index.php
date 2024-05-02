@@ -117,8 +117,8 @@ else{
     }
     
 }
-echo "out-of-if-block";
-print_r($results);
+//echo "out-of-if-block";
+//print_r($results);
 
 
 if (isset($_POST['btn-update'])) {
@@ -236,7 +236,7 @@ if (isset($_POST['btn-delete'])) {
                                        $pge_no= isset($_GET['page_no'])+10;
                                     
                                     echo "<a href='https://mycrm-e4afdad64f54.herokuapp.com/index.php/?page_no='".$pge_no."'>
-                                        next page
+                                        Next Page
                                     </a>";
                                     ?>
                                 </div>
