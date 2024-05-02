@@ -15,8 +15,8 @@ $woocommerce = new Client(
     ]
 );
 $currentPage = $_GET['page_no'];
-if ($currentPage=0){
-    echo "page zero";
+if (isset($_GET['page_no'])){
+    echo "page zeroo";
 }
 //function myMessage($results) {
     //$woocommerce = new Client(
