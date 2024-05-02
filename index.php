@@ -180,7 +180,6 @@ if (isset($_POST['btn-delete'])) {
                 ?>
                                         </tbody>
                                     </table>
-                                    $woocommerce->get($paramx);
                                     <form action="index.php" method="post">
                                         <input type="submit" name="appetizer_button" value="Appetizers & Soup">
                                     </form>
