@@ -34,7 +34,7 @@ $woocommerce = new Client(
 
 //$paramz = "orders";
 //$thepage = 1;
-$offset=0;
+
 if (isset($_GET['page_no'])){
     
     $offset = $_GET['page_no'];
