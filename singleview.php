@@ -49,15 +49,15 @@
     <title>Dashboard Template for Bootstrap</title>
 
 </head>
- <body>
+ <body style="color: #121212;">
 	        <?php
         
             
             echo"<div class='container'>
-			    <div class='row' style='border: 1px solid #d1cdcd; border-radius: 12px; padding: 15px; margin-bottom:30px; box-shadow:0px 0px 20px 0px #888888;'>
-  			        <div class='col-sm-9'><h2><strong>Order #".$ord['id']."</strong></h2></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
+			    <div class='row' style='border: 1px solid #d1cdcd; Xborder-radius: 12px; padding: 15px; Xmargin-bottom:30px; Xbox-shadow:0px 0px 20px 0px #888888;'>
+  			        <div class='col-sm-9' style='background-color: #282828; width:70px; margin-right:5px; border-radius: 12px;'><h2><strong>Order #".$ord['id']."</strong></h2></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
 			            <p>". $ord["date_created"] ."</p></br>
-			            <p style='text-decoration: underline; font-size: 16px;'><strong>Address: </strong></p></br><p>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
+			            <p style='text-decoration: underline; font-size: 16px;'><strong>Address: </strong></p><p>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
                         </br><p style='text-decoration: underline; font-size: 16px;'><strong>Items: </strong></p>";
 			?>
                         <table id='myTable' class='table table-striped table-bordered'>
@@ -100,7 +100,7 @@
             <?php    
             echo"
                     </div>
- 			            <div class='col-sm-3'><h4 style='font-size: 16px;'><strong>Customer detail</strong></h4></br>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
+ 			            <div class='col-sm-3' style='background-color: #282828; border-radius:12px; margin-left:5px; width:25px;'><h4 style='font-size: 16px;'><strong>Customer detail</strong></h4></br>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."
 			            <p>". $ord["billing"]["email"]."</p>
 			            </br>
 			    </div>
