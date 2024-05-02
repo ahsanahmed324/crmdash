@@ -16,7 +16,7 @@ $woocommerce = new Client(
 );
 $currentPage = $_GET['page_no'];
 if (isset($_GET['page_no'])){
-    echo "page zeroo";
+    echo "page onee";
 }
 //function myMessage($results) {
     //$woocommerce = new Client(
@@ -184,13 +184,11 @@ if (isset($_POST['btn-delete'])) {
                 ?>
                                         </tbody>
                                     </table>
-                                    <form action="index.php" method="post">
-                                        <input class="btn" type="submit" name="appetizer_button" value="Appetizers & Soup">
-                                    </form>
+                                    <a href="https://mycrm-e4afdad64f54.herokuapp.com/index.php/?page_no=1">next page</a>
                                     <?php
-                                        if (isset($_POST['appetizer_button'])) {
+                                      //  if (isset($_POST['appetizer_button'])) {
                                             // Your code that you want to execute
-                                            alert("button pressed");
+                                        //    alert("button pressed");
                                             //myMessage();
                                         }
                                     ?>
