@@ -39,7 +39,7 @@ if (isset($_GET['page_no'])){
     
     $currentPage = $_GET['page_no'];
     //$querry = "orders?page=".$currentPage."&"." rel='next'";
-    $querry = "orders?page=15&per_page=1";
+    $querry = "orders?page=15&per_page=10";
 
     try {
         echo "page onee";
