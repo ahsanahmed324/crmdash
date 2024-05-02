@@ -115,6 +115,8 @@ else{
     }
     
 }
+echo "out-of-if-block";
+print_r($results);
 
 
 if (isset($_POST['btn-update'])) {
