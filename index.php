@@ -233,8 +233,9 @@ if (isset($_POST['btn-delete'])) {
                                         </tbody>
                                     </table>
                                     <?php 
-                                       $pge_no= isset($_GET['page_no'])+10;
-                                    
+                                       $pge_no= isset($_GET['page_no']);
+                                       $pge_no = $pge_no + 10; 
+                                       echo $pge_no;
                                     echo "<a href='https://mycrm-e4afdad64f54.herokuapp.com/index.php/?page_no='".$pge_no."'>
                                         Next Page
                                     </a>";
