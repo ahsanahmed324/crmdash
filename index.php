@@ -14,10 +14,7 @@ $woocommerce = new Client(
         
     ]
 );
-$currentPage = $_GET['page_no'];
-if (isset($_GET['page_no'])){
-    echo "page onee";
-}
+
 //function myMessage($results) {
     //$woocommerce = new Client(
       //  'https://70f5f7897a.nxcli.io', // Your store URL
@@ -35,43 +32,90 @@ if (isset($_GET['page_no'])){
   //}
 //$products = $woocommerce->get('products');
 
-$paramz = "orders";
-$thepage = 1;
-try {
+//$paramz = "orders";
+//$thepage = 1;
 
-    $results = $woocommerce->get($paramz);
-	//$results = $woocommerce->get('orders');
-	$products = $woocommerce->get('products');
-	$customers = $woocommerce->get('customers');
-	$result = count($results);
-	$customer = count($customers);
-	$product = count($products);
-	$query = ['date_min' => '2017-10-01', 'date_max' => '2017-10-30'];
-	$sales = $woocommerce->get('reports/sales', $query);
-	$sale = $sales[0]["total_sales"];
+if (isset($_GET['page_no'])){
+    echo "page onee";
+    $currentPage = $_GET['page_no'];
+    $querry = "orders?page=".$currentPage.">;"." rel='next'";
 
-	// Last request data.
+    try {
 
-	$lastRequest = $woocommerce->http->getRequest();
-	$lastRequest->getUrl(); // Requested URL (string).
-	$lastRequest->getMethod(); // Request method (string).
-	$lastRequest->getParameters(); // Request parameters (array).
-	$lastRequest->getHeaders(); // Request headers (array).
-	$lastRequest->getBody(); // Request body (JSON).
+        $results = $woocommerce->get($querry);
+        //$results = $woocommerce->get('orders');
+        $products = $woocommerce->get('products');
+        $customers = $woocommerce->get('customers');
+        $result = count($results);
+        $customer = count($customers);
+        $product = count($products);
+        $query = ['date_min' => '2017-10-01', 'date_max' => '2017-10-30'];
+        $sales = $woocommerce->get('reports/sales', $query);
+        $sale = $sales[0]["total_sales"];
+    
+        // Last request data.
+    
+        $lastRequest = $woocommerce->http->getRequest();
+        $lastRequest->getUrl(); // Requested URL (string).
+        $lastRequest->getMethod(); // Request method (string).
+        $lastRequest->getParameters(); // Request parameters (array).
+        $lastRequest->getHeaders(); // Request headers (array).
+        $lastRequest->getBody(); // Request body (JSON).
+    
+        // Last response data.
+    
+        $lastResponse = $woocommerce->http->getResponse();
+        $lastResponse->getCode(); // Response code (int).
+        $lastResponse->getHeaders(); // Response headers (array).
+        $lastResponse->getBody(); // Response body (JSON).
+    }
+    
+    catch(HttpClientException $e) {
+        $e->getMessage(); // Error message.
+        $e->getRequest(); // Last request data.
+        $e->getResponse(); // Last response data.
+    }
+}
+else{
 
-	// Last response data.
+    try {
 
-	$lastResponse = $woocommerce->http->getResponse();
-	$lastResponse->getCode(); // Response code (int).
-	$lastResponse->getHeaders(); // Response headers (array).
-	$lastResponse->getBody(); // Response body (JSON).
+        $results = $woocommerce->get('orders');
+        //$results = $woocommerce->get('orders');
+        $products = $woocommerce->get('products');
+        $customers = $woocommerce->get('customers');
+        $result = count($results);
+        $customer = count($customers);
+        $product = count($products);
+        $query = ['date_min' => '2017-10-01', 'date_max' => '2017-10-30'];
+        $sales = $woocommerce->get('reports/sales', $query);
+        $sale = $sales[0]["total_sales"];
+    
+        // Last request data.
+    
+        $lastRequest = $woocommerce->http->getRequest();
+        $lastRequest->getUrl(); // Requested URL (string).
+        $lastRequest->getMethod(); // Request method (string).
+        $lastRequest->getParameters(); // Request parameters (array).
+        $lastRequest->getHeaders(); // Request headers (array).
+        $lastRequest->getBody(); // Request body (JSON).
+    
+        // Last response data.
+    
+        $lastResponse = $woocommerce->http->getResponse();
+        $lastResponse->getCode(); // Response code (int).
+        $lastResponse->getHeaders(); // Response headers (array).
+        $lastResponse->getBody(); // Response body (JSON).
+    }
+    
+    catch(HttpClientException $e) {
+        $e->getMessage(); // Error message.
+        $e->getRequest(); // Last request data.
+        $e->getResponse(); // Last response data.
+    }
+    
 }
 
-catch(HttpClientException $e) {
-	$e->getMessage(); // Error message.
-	$e->getRequest(); // Last request data.
-	$e->getResponse(); // Last response data.
-}
 
 if (isset($_POST['btn-update'])) {
 	$status = $_POST['bookId'];
