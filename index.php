@@ -35,10 +35,8 @@ $woocommerce = new Client(
 //$paramz = "orders";
 //$thepage = 1;
 
-if (isset($_GET['page_no'])){
-    
+if (isset($_GET['page_no'])){    
     $offset = $_GET['page_no'];
-    //$querry = "orders?page=".$currentPage."&"." rel='next'";
     $querry = "orders?offset=".$offset;
 
     try {
@@ -117,9 +115,6 @@ else{
     }
     
 }
-//echo "out-of-if-block";
-//print_r($results);
-
 
 if (isset($_POST['btn-update'])) {
 	$status = $_POST['bookId'];
@@ -223,7 +218,7 @@ if (isset($_POST['btn-delete'])) {
                 echo "<tr><td>".'<a href="'.$nextpage.'/?idd='.$details['id'].'">'.$details['id']."</a></td>
                           <td>" . $details["billing"]["first_name"].$details["billing"]["last_name"]."</td>
                           <td>" . $details["shipping"]["address_1"]."</td>
-                          <td>" . $details["billing"]["phone"]."</td>
+                          <td>" . $details["billing"]["email"]."</td>
                           <td>" . $details["date_created"]."</td>
 			  <td>" . $details["status"]."</td>
                           <td><a class='open-AddBookDialog btn btn-primary' data-target='#myModal' data-id=".$details['id']." data-toggle='modal'>Update</a>
@@ -235,10 +230,8 @@ if (isset($_POST['btn-delete'])) {
                                     <?php 
                                        $pge_no= htmlspecialchars($_GET['page_no']);
                                        $pge_no = (int)$pge_no;
-                                       echo gettype($pge_no);
                                        $pge_no = $pge_no + 10; 
-                                       echo $pge_no;
-                                    echo '<a href="https://mycrm-e4afdad64f54.herokuapp.com/index.php/?page_no='.$pge_no.'">
+                                       echo '<a class="btn btn-secondary" style="float:right;" href="https://mycrm-e4afdad64f54.herokuapp.com/index.php/?page_no='.$pge_no.'">
                                         Next Page
                                     </a>';
                                     ?>
