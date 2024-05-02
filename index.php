@@ -14,21 +14,25 @@ $woocommerce = new Client(
         
     ]
 );
-function myMessage($results) {
-    $woocommerce = new Client(
-        'https://70f5f7897a.nxcli.io', // Your store URL
-        'ck_c38e44917a8a4be6ae423623655879d1a3ccafbf', // Your consumer key
-        'cs_31d43cda312ea0f137338b5699e12cd8f849fdda', // Your consumer secret
-        [
-            'wp_api' => true, // Enable the WP REST API integration
-            'version' => 'wc/v2' // WooCommerce WP REST API version
+$currentPage = $_GET['page_no'];
+if ($currentPage=0){
+    echo "page zero";
+}
+//function myMessage($results) {
+    //$woocommerce = new Client(
+      //  'https://70f5f7897a.nxcli.io', // Your store URL
+        //'ck_c38e44917a8a4be6ae423623655879d1a3ccafbf', // Your consumer key
+        //'cs_31d43cda312ea0f137338b5699e12cd8f849fdda', // Your consumer secret
+       // [
+        //    'wp_api' => true, // Enable the WP REST API integration
+        //    'version' => 'wc/v2' // WooCommerce WP REST API version
             
-        ]
-    );
-    $results = $woocommerce->get('orders?page=2>; rel="next"');
-    echo "function runs";
-    return $results;
-  }
+        //]
+    //);
+    //$results = $woocommerce->get('orders?page=2>; rel="next"');
+    //echo "function runs";
+    //return $results;
+  //}
 //$products = $woocommerce->get('products');
 
 $paramz = "orders";
