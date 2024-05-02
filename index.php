@@ -187,7 +187,7 @@ if (isset($_POST['btn-delete'])) {
                                         if (isset($_POST['appetizer_button'])) {
                                             // Your code that you want to execute
                                             alert("button pressed");
-                                            myMessage();
+                                            //myMessage();
                                         }
                                     ?>
                                 </div>
