@@ -41,9 +41,9 @@ if (isset($_GET['page_no'])){
     $querry = "orders?page=".$currentPage."&"." rel='next'";
 
     try {
-        
-        $results = $woocommerce->get($querry);
         echo "page onee";
+        $results = $woocommerce->get($querry);
+        echo "page two";
         //$results = $woocommerce->get('orders');
         $products = $woocommerce->get('products');
         $customers = $woocommerce->get('customers');
