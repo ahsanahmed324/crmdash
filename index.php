@@ -34,12 +34,12 @@ $woocommerce = new Client(
 
 //$paramz = "orders";
 //$thepage = 1;
-
+$offset=0;
 if (isset($_GET['page_no'])){
     
-    $currentPage = $_GET['page_no'];
+    $offset = $_GET['page_no'];
     //$querry = "orders?page=".$currentPage."&"." rel='next'";
-    $querry = "orders?page=15&per_page=10";
+    $querry = "orders?offset=".$offset;
 
     try {
         echo "page onee";
@@ -232,7 +232,7 @@ if (isset($_POST['btn-delete'])) {
                 ?>
                                         </tbody>
                                     </table>
-                                    <a href="https://mycrm-e4afdad64f54.herokuapp.com/index.php/?page_no=1">next page</a>
+                                    <a href="https://mycrm-e4afdad64f54.herokuapp.com/index.php/?page_no=11">next page</a>
                                    
                                 </div>
                </div>
