@@ -51,7 +51,7 @@
 </head>
  <body style="background-color: #121212;">
 	        <?php
-            echo"<div style="text-align:center;">
+            echo"<div style='text-align:center;'>
                 <img src='/myherocard-logo-main.webp' style='width:153px; height:102px; padding:20px;'>
                 </div>
                 <div class='container-fluid'>
