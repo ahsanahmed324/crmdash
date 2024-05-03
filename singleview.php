@@ -50,6 +50,18 @@
 
 </head>
  <body style="background-color: #121212;">
+ <div class="container">
+  <div class="row">
+    <div class="col" style="background-color:red">
+      1 of 3x
+    </div>
+    <div class="col-6" style="background-color:white">
+      2 of 3 (wider)
+    </div>
+    <div class="col" style="background-color:green">
+      3 of 3
+    </div>
+  </div>
 	        <?php
         
             
