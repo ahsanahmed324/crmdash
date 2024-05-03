@@ -53,7 +53,8 @@
 	        <?php
         
             
-            echo"<div class='container'>
+            echo"<img src='mycrm-e4afdad64f54.herokuapp.com/cropped-l1-min-2.png' style='width:130px; height:130px;'
+                <div class='container'>
                 <h2 style='color:#ba9ffb'>Order Details</h2>
 			    <div class='row' style='Xborder: 1px solid #d1cdcd; Xborder-radius: 12px; padding: 15px; Xmargin-bottom:30px; Xbox-shadow:0px 0px 20px 0px #888888;'>
   			        <div class='col-sm-9' style='background-color: #282828; width:70%; margin-right:5px; border-radius: 12px;'><h3 style='color: #ffffff;'><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
