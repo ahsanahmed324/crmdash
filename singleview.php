@@ -54,8 +54,9 @@
         
             
             echo"<div class='container'>
+                <h2 style='#ba9ffb'>Order Details</h2>
 			    <div class='row' style='Xborder: 1px solid #d1cdcd; Xborder-radius: 12px; padding: 15px; Xmargin-bottom:30px; Xbox-shadow:0px 0px 20px 0px #888888;'>
-  			        <div class='col-sm-9' style='background-color: #282828; width:70%; margin-right:5px; border-radius: 12px;'><h2 style='color: #ffffff;'><strong>Order #".$ord['id']."</strong></h2></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
+  			        <div class='col-sm-9' style='background-color: #282828; width:70%; margin-right:5px; border-radius: 12px;'><h3 style='color: #ffffff;'><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
 			            <p style='color: #8f8e8e;'>". $ord["date_created"] ."</p></br>
 			            </br><p style='text-decoration: underline; font-size: 16px; color: #ffffff;'><strong>Items: </strong></p>";
 			?>
