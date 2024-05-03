@@ -50,18 +50,7 @@
 
 </head>
  <body style="background-color: #121212;">
- <div class="container">
-  <div class="row">
-    <div class="col-md-3" style="background-color:red">
-      1 of 3x
-    </div>
-    <div class="col-md-6" style="background-color:white">
-      2 of 3 (wider)
-    </div>
-    <div class="col-md-3" style="background-color:green">
-      3 of 3
-    </div>
-  </div>
+ 
 	        <?php
         
             
@@ -71,7 +60,7 @@
                     <div class='col-md-3'>
                         1 of 3
                     </div>
-                    <div class='col-md-6' style='background-color: #282828; width:70%; margin-right:5px; border-radius: 12px;'><h3 style='color: #ffffff;'><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
+                    <div class='col-md-6' style='background-color: #282828; Xwidth:70%; margin-right:5px; border-radius: 12px;'><h3 style='color: #ffffff;'><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
 			            <p style='color: #8f8e8e;'>". $ord["date_created"] ."</p></br>
 			            </br><p style='text-decoration: underline; font-size: 16px; color: #ffffff;'><strong>Items: </strong></p>";
 			?>
@@ -115,7 +104,7 @@
             <?php    
             echo"
                     </div>
- 			            <div class='col-md-3' style='background-color: #282828; border-radius:12px; margin-left:5px; width:25%;'>
+ 			            <div class='col-md-3' style='background-color: #282828; border-radius:12px; margin-left:5px; Xwidth:25%;'>
                         <h3 style='color: #ffffff'>Customer Details</h3>
                         <h4 style='font-size: 16px; color: #ffffff;'><strong>Name & Email</strong></h4><p style='color: #8f8e8e;'>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."</p>
 			            <p style='color: #8f8e8e;'>". $ord["billing"]["email"]."</p>
