@@ -19,7 +19,7 @@
     $coming_id = htmlspecialchars($_GET["idd"]);
     $paramx = "orders/".$coming_id;
     $ord = $woocommerce->get($paramx);
-    echo htmlspecialchars($_GET["idd"]);
+    //echo htmlspecialchars($_GET["idd"]);
     //echo $GLOBALS['$woocommerce'];
     $product_items = array_shift($ord['line_items']);
     //$test_items = ($ord['line_items']);
