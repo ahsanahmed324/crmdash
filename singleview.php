@@ -55,10 +55,10 @@
     <div class="col" style="background-color:red">
       1 of 3x
     </div>
-    <div class="col-6" style="background-color:white">
+    <div class="col-md-auto" style="background-color:white">
       2 of 3 (wider)
     </div>
-    <div class="col" style="background-color:green">
+    <div class="col col-lg-2" style="background-color:green">
       3 of 3
     </div>
   </div>
