@@ -57,7 +57,7 @@
             echo"<img src='/myherocard-logo-main.webp' style='width:153px; height:102px; padding:20px;'>
                 <div class='container-fluid'>
 			    <div class='row' style='Xborder: 1px solid #d1cdcd; Xborder-radius: 12px; padding: 15px; Xmargin-bottom:30px; Xbox-shadow:0px 0px 20px 0px #888888;'>
-                    <div class='col-md-2' style='col-md-6'>
+                    <div class='col-md-2' style='color: a688fa;'>
                         1 of 3
                     </div>
                     <div class='col-md-7' style='background-color: #282828; Xwidth:70%; Xmargin-right:5px; border-radius: 12px;'><h3 style='color: #ffffff;'><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
