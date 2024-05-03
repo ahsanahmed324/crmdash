@@ -53,11 +53,13 @@
 	        <?php
         
             
-            echo"<img src='/myherocard-logo-main.webp' style='width:130px; height:130px;'>
+            echo"<img src='/myherocard-logo-main.webp' style='width:153px; height:102px; padding:20px;'>
                 <div class='container'>
-                <h2 style='color:#ba9ffb'>Order Details</h2>
 			    <div class='row' style='Xborder: 1px solid #d1cdcd; Xborder-radius: 12px; padding: 15px; Xmargin-bottom:30px; Xbox-shadow:0px 0px 20px 0px #888888;'>
-  			        <div class='col-sm-9' style='background-color: #282828; width:70%; margin-right:5px; border-radius: 12px;'><h3 style='color: #ffffff;'><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
+                    <div class="col">
+                        1 of 3
+                    </div>
+                    <div class='col-6' style='background-color: #282828; width:70%; margin-right:5px; border-radius: 12px;'><h3 style='color: #ffffff;'><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
 			            <p style='color: #8f8e8e;'>". $ord["date_created"] ."</p></br>
 			            </br><p style='text-decoration: underline; font-size: 16px; color: #ffffff;'><strong>Items: </strong></p>";
 			?>
@@ -101,7 +103,7 @@
             <?php    
             echo"
                     </div>
- 			            <div class='col-sm-3' style='background-color: #282828; border-radius:12px; margin-left:5px; width:25%;'>
+ 			            <div class='col' style='background-color: #282828; border-radius:12px; margin-left:5px; width:25%;'>
                         <h3 style='color: #ffffff'>Customer Details</h3>
                         <h4 style='font-size: 16px; color: #ffffff;'><strong>Name & Email</strong></h4><p style='color: #8f8e8e;'>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."</p>
 			            <p style='color: #8f8e8e;'>". $ord["billing"]["email"]."</p>
