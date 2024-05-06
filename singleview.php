@@ -55,7 +55,8 @@
                 <img src='/myherocard-logo-main.webp' style='width:153px; height:102px; padding:20px;'>
                 </div>
                 <div class='container'>
-			                       <div class='col-8' style='Xwidth:70%; Xmargin-right:5px; border-radius: 12px;'><h3><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
+			<div class='row'>
+			        <div class='col-8' style='Xwidth:70%; Xmargin-right:5px; border-radius: 12px;'><h3><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
 			            <p>". $ord["date_created"] ."</p></br>
 			            </br><p style='text-decoration: underline; font-size: 16px;'><strong>Items: </strong></p>";
 			?>
