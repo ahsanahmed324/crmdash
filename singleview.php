@@ -49,21 +49,21 @@
     <title>Dashboard Template for Bootstrap</title>
 
 </head>
- <body style="background-color: #121212;">
+ <body >
 	        <?php
             echo"<div style='text-align:center;'>
                 <img src='/myherocard-logo-main.webp' style='width:153px; height:102px; padding:20px;'>
                 </div>
                 <div class='container-fluid'>
-			    <div class='row' style='Xborder: 1px solid #d1cdcd; Xborder-radius: 12px; padding: 15px; Xmargin-bottom:30px; Xbox-shadow:0px 0px 20px 0px #888888;'>
+			    <div class='row' style='border: 1px solid #d1cdcd; border-radius: 12px; padding: 15px; margin-bottom:30px; box-shadow:0px 0px 20px 0px #888888;'>
                     <div class='col-md-2' style='background-color: white;'>
                         1 of 3
                     </div>
-                    <div class='col-md-7' style='background-color: #282828; Xwidth:70%; Xmargin-right:5px; border-radius: 12px;'><h3 style='color: #ffffff;'><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
-			            <p style='color: #8f8e8e;'>". $ord["date_created"] ."</p></br>
-			            </br><p style='text-decoration: underline; font-size: 16px; color: #ffffff;'><strong>Items: </strong></p>";
+                    <div class='col-md-7' style='Xwidth:70%; Xmargin-right:5px; border-radius: 12px;'><h3><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
+			            <p>". $ord["date_created"] ."</p></br>
+			            </br><p style='text-decoration: underline; font-size: 16px;'><strong>Items: </strong></p>";
 			?>
-                        <table id='myTable' class='table table-borderless'>
+                        <table id='myTable' class='table table-striped table-bordered'>
                             <thead>
                                 <tr>
                                     <th>Product</th>
@@ -80,7 +80,7 @@
             ?>
                             </tbody>
                         </table>
-                        <p><strong style='color: #ffffff;'>Upsells/Bumps: </strong></p>
+                        <p><strong>Upsells/Bumps: </strong></p>
                         <table id='myTable' class='table table-striped table-bordered'>
                             <thead>
                                 <tr>
@@ -103,11 +103,11 @@
             <?php    
             echo"
                     </div>
- 			            <div class='col-md-2' style='background-color: #282828; border-radius:12px; margin-left:5px; Xwidth:25%;'>
+ 			            <div class='col-md-2' style='border-radius:12px; margin-left:5px; Xwidth:25%;'>
                         <h3 style='color: #ffffff'>Customer Details</h3>
-                        <h4 style='font-size: 16px; color: #ffffff;'><strong>Name & Email</strong></h4><p style='color: #8f8e8e;'>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."</p>
+                        <h4 style='font-size: 16px;'><strong>Name & Email</strong></h4><p>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."</p>
 			            <p style='color: #8f8e8e;'>". $ord["billing"]["email"]."</p>
-                        <p style='text-decoration: underline; font-size: 16px; color: #ffffff;'><strong>Address: </strong></p><p style='color: #8f8e8e;'>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
+                        <p style='text-decoration: underline; font-size: 16px;'><strong>Address: </strong></p><p>".$ord["shipping"]["address_1"]." &nbsp;".$ord["shipping"]["address_2"]."</br>". $ord["shipping"]["city"].",".$ord["shipping"]["state"].",".$ord["shipping"]["country"]."</p>
 			            </br>
 			    </div>
 		    </div>";
