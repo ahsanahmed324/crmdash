@@ -55,8 +55,8 @@
                 <img src='/myherocard-logo-main.webp' style='width:153px; height:102px; padding:20px;'>
                 </div>
                 <div class='container'>
-			<div class='row'>
-			        <div class='col-8' style='Xwidth:70%; Xmargin-right:5px; border-radius: 12px;'><h3><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
+			<div class='row' style='border:1px solid; border-radius:15px; padding:15px;'>
+			        <div class='col-sm-8' style='Xwidth:70%; Xmargin-right:5px; border-radius: 12px;'><h3><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
 			            <p>". $ord["date_created"] ."</p></br>
 			            </br><p style='text-decoration: underline; font-size: 16px;'><strong>Items: </strong></p>";
 			?>
@@ -100,7 +100,7 @@
             <?php    
             echo"
                     </div>
- 			            <div class='col-4' style='border-radius:12px; margin-left:5px; Xwidth:25%;'>
+ 			            <div class='col-sm-4' style='border-radius:12px; margin-left:5px; Xwidth:25%;'>
                         <h3 style='color: #ffffff'>Customer Details</h3>
                         <h4 style='font-size: 16px;'><strong>Name & Email</strong></h4><p>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."</p>
 			            <p style='color: #8f8e8e;'>". $ord["billing"]["email"]."</p>
