@@ -207,7 +207,6 @@ if (isset($_POST['btn-delete'])) {
                                                 <th>Contact</th>
                                                 <th>Order Date</th>
                                                 <th>Status</th>
-                                                <th>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
