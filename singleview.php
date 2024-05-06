@@ -54,12 +54,8 @@
             echo"<div style='text-align:center;'>
                 <img src='/myherocard-logo-main.webp' style='width:153px; height:102px; padding:20px;'>
                 </div>
-                <div class='container-fluid'>
-			    <div class='row' style='border: 1px solid #d1cdcd; border-radius: 12px; padding: 15px; margin-bottom:30px; box-shadow:0px 0px 20px 0px #888888;'>
-                    <div class='col-md-2' style='background-color: white;'>
-                        1 of 3
-                    </div>
-                    <div class='col-md-7' style='Xwidth:70%; Xmargin-right:5px; border-radius: 12px;'><h3><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
+                <div class='container'>
+			                       <div class='col-md-7' style='Xwidth:70%; Xmargin-right:5px; border-radius: 12px;'><h3><strong>Order #".$ord['id']."</strong></h3></br><span style='color: green; font-weight:bold;'>".$ord["status"]."</span></br>
 			            <p>". $ord["date_created"] ."</p></br>
 			            </br><p style='text-decoration: underline; font-size: 16px;'><strong>Items: </strong></p>";
 			?>
