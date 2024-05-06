@@ -100,7 +100,7 @@
             <?php    
             echo"
                     </div>
- 			            <div class='col-sm-4' style='border-radius:12px; margin-left:5px; Xwidth:25%;'>
+ 			            <div class='col-sm-4' style='border-radius:12px; xmargin-left:5px; Xwidth:25%;'>
                         <h3 style='color: #ffffff'>Customer Details</h3>
                         <h4 style='font-size: 16px;'><strong>Name & Email</strong></h4><p>". $ord["billing"]["first_name"].$ord["billing"]["last_name"]."</p>
 			            <p style='color: #8f8e8e;'>". $ord["billing"]["email"]."</p>
