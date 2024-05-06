@@ -221,8 +221,7 @@ if (isset($_POST['btn-delete'])) {
                           <td>" . $details["billing"]["email"]."</td>
                           <td>" . $details["date_created"]."</td>
 			  <td>" . $details["status"]."</td>
-                          <td><a class='open-AddBookDialog btn btn-primary' data-target='#myModal' data-id=".$details['id']." data-toggle='modal'>Update</a>
-                          <a class='open-deleteDialog btn btn-danger' data-target='#myModal1' data-id=".$details['id']." data-toggle='modal'>Delete</a></td></tr>";
+                          <td></td></tr>";
                 }
                 ?>
                                         </tbody>
@@ -238,70 +237,7 @@ if (isset($_POST['btn-delete'])) {
                                 </div>
                </div>
 
-                <div class="container">
-                                    <h2 class="sub-header">Customers List</h2>
-                                    <div class='table-responsive'>
-                                        <table id='myTable' class='table table-striped table-bordered'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Email</th>
-                                                    <th>Name</th>
-                                                    <th>Billing Address</th>
-                                                    <th>Total Orders</th>
-                                                    <th>Total spent</th>
-                                                    <th>Avatar</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php 
-                    foreach($customers as $customer){
-
-                    echo "<tr><td>" . $customer["email"]."</td>
-                              <td>" . $customer["first_name"].$customer["last_name"]."</td>
-                              <td>" . $customer["billing"]["address_1"]."</td>
-                              <td>" . $customer["orders_count"]."</td>
-                              <td>" . $customer["total_spent"]."</td>
-                              <td><img height='50px' width='50px' src='".$customer["avatar_url"]."'></td></tr>";
-                    }
-
-                    ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-    </div>
-
-    <div class="container">
-                                    <h2 class="sub-header">Products List</h2>
-                                    <div class='table-responsive'>
-                                        <table id='myTable' class='table table-striped table-bordered'>
-                                            <thead>
-                                                <tr>
-                                                    <th>SKU</th>
-                                                    <th>Name</th>
-                                                    <th>Status</th>
-                                                    <th>Price</th>
-                                                    <th>Total Sales</th>
-                                                    <th>Picture</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php
-			
-                    foreach($products as $product){
-			
-                    echo "<tr><td>" . $product["sku"].'</td>
-                              <td><a href="'.$product["permalink"].'">'. $product["name"]."</a></td>
-                              <td>" . $product["status"]."</td>
-                              <td>" . $product["price"]."</td>
-                              <td>" . $product["total_sales"]."</td>
-                              <td><img height='50px' width='50px' src='".$product["images"][0]["src"]."'></td></tr>";
-                    }
-
-                    ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-    </div>
+               
 
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
